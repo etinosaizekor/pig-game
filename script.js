@@ -100,7 +100,6 @@ document.querySelector('.btn--roll').addEventListener('click', function () {
 
             } else {
                 accumulatedScore1 += player1Score;
-                //displayBillboardScore(accumulatedScore1);
                 player1Score = scoreReset(player1Score);
             }
             displayCurrentScore(player1Score);
@@ -111,12 +110,10 @@ document.querySelector('.btn--roll').addEventListener('click', function () {
 
             } else {
                 accumulatedScore2 += player2Score;
-                //displayBillboardScore(accumulatedScore2);
                 player2Score = scoreReset(player2Score);
             }
 
             displayCurrentScore(player2Score);
-            //document.getElementById('current--1').textContent = player2Score;
         }
     } else {
         if (accumulatedScore1 >= 100) {
@@ -132,12 +129,10 @@ document.querySelector('.btn--roll').addEventListener('click', function () {
 document.querySelector('.btn--hold').addEventListener('click', function () {
     if (accumulatedScore1 < 100 && accumulatedScore2 < 100) {
         if (activeClassCheck(firstPlayer)) {
-            //accumulatedScore1 = accumulatedScores();
             accumulatedScore1 += player1Score;
             displayBillboardScore(accumulatedScore1);
             player1Score = scoreReset(player1Score);
         } else {
-            //accumulatedScore2 = accumulatedScores();
             accumulatedScore2 += player2Score;
             displayBillboardScore(accumulatedScore2);
             player2Score = scoreReset(player2Score);
